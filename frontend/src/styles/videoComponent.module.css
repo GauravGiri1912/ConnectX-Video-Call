@@ -1,0 +1,513 @@
+.lobbyPage {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background:
+        radial-gradient(circle at top left, rgba(45, 91, 255, 0.12), transparent 24%),
+        radial-gradient(circle at right, rgba(255, 122, 24, 0.14), transparent 22%),
+        linear-gradient(180deg, #f8fbff 0%, #eef3f9 100%);
+}
+
+.lobbyShell {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.lobbyContent {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+    gap: 2rem;
+    align-items: center;
+    min-height: calc(100vh - 4rem);
+}
+
+.lobbyCopy {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.lobbyEyebrow {
+    width: fit-content;
+    padding: 0.55rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(45, 91, 255, 0.08);
+    color: #2d5bff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.lobbyTitle {
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 4.4rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: #13254b;
+}
+
+.lobbyText {
+    margin: 0;
+    max-width: 34rem;
+    color: #60708a;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.lobbyChecklist {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 0.4rem;
+}
+
+.lobbyCheckItem {
+    padding: 1rem 1.1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(19, 37, 75, 0.08);
+    box-shadow: 0 20px 40px rgba(18, 31, 65, 0.08);
+}
+
+.lobbyCheckItem strong {
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #13254b;
+}
+
+.lobbyCheckItem span {
+    color: #60708a;
+}
+
+.lobbyCard {
+    padding: 1.15rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.84);
+    border: 1px solid rgba(19, 37, 75, 0.08);
+    box-shadow: 0 30px 65px rgba(18, 31, 65, 0.12);
+    backdrop-filter: blur(18px);
+}
+
+.lobbyPreviewWrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #0a112b;
+    min-height: 420px;
+}
+
+.lobbyPreview {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+}
+
+.lobbyPreviewBadge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(5, 10, 32, 0.56);
+    color: white;
+    font-weight: 700;
+    font-size: 0.86rem;
+    backdrop-filter: blur(10px);
+}
+
+.lobbyForm {
+    display: grid;
+    gap: 1rem;
+    padding: 1.1rem 0.35rem 0.2rem;
+}
+
+.lobbyFormLabel {
+    margin: 0 0 0.45rem 0;
+    color: #60708a;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+.lobbyActions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.meetVideoContainer {
+    position: relative;
+    min-height: 100vh;
+    padding: 1rem 23.5rem 7rem 1rem;
+    background:
+        radial-gradient(circle at top left, rgba(61, 165, 255, 0.12), transparent 24%),
+        radial-gradient(circle at top right, rgba(255, 122, 24, 0.12), transparent 22%),
+        linear-gradient(180deg, #071035 0%, #0a0f3e 100%);
+    overflow: hidden;
+}
+
+.meetingTopBar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+}
+
+.topBarLabel,
+.panelEyebrow {
+    margin: 0 0 0.35rem 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.topBarTitle {
+    margin: 0;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.topBarMeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.7rem;
+}
+
+.noticePill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(61, 165, 255, 0.16);
+    color: #d6ebff;
+    font-size: 0.88rem;
+}
+
+.conferenceView {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: minmax(240px, 1fr);
+    gap: 1rem;
+    min-height: calc(100vh - 11rem);
+    align-content: start;
+}
+
+.videoTile {
+    position: relative;
+    min-height: 240px;
+    border-radius: 28px;
+    overflow: hidden;
+    background: rgba(7, 17, 52, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.videoTile video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #08112b;
+}
+
+.videoTileActive {
+    border-color: #3da5ff;
+    box-shadow: 0 0 0 1px rgba(61, 165, 255, 0.45), 0 0 20px rgba(61, 165, 255, 0.62), 0 0 48px rgba(61, 165, 255, 0.22);
+    transform: translateY(-2px);
+}
+
+.videoTileHeader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.1rem;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(180deg, transparent, rgba(3, 8, 24, 0.82));
+}
+
+.activeSpeakerBadge {
+    padding: 0.32rem 0.62rem;
+    border-radius: 999px;
+    background: rgba(61, 165, 255, 0.2);
+    color: #9ad5ff;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.participantsSidebar,
+.chatRoom {
+    position: absolute;
+    right: 1rem;
+    width: 21rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 24px 52px rgba(5, 11, 33, 0.25);
+    overflow: hidden;
+}
+
+.participantsSidebar {
+    top: 1rem;
+    padding: 1.1rem;
+}
+
+.chatRoom {
+    top: 11rem;
+    bottom: 6.6rem;
+    padding: 0;
+}
+
+.sidebarHeader,
+.panelHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebarHeader h2,
+.panelHeader h1 {
+    margin: 0;
+    color: #13254b;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.panelEyebrow {
+    color: #6d7c95;
+}
+
+.panelCount {
+    min-width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background: #edf3ff;
+    color: #2d5bff;
+    font-weight: 700;
+}
+
+.chatContainer {
+    position: relative;
+    height: 100%;
+    padding: 1.1rem;
+}
+
+.chattingDisplay {
+    height: calc(100% - 5.75rem);
+    padding-right: 0.2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.chattingArea {
+    position: absolute;
+    left: 1.1rem;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(19, 37, 75, 0.08);
+    border-radius: 20px;
+    background: #f8fbff;
+}
+
+.chatBubble {
+    padding: 0.9rem;
+    border-radius: 18px;
+    background: #f4f7fb;
+    border: 1px solid rgba(19, 37, 75, 0.06);
+}
+
+.chatSender {
+    margin: 0 0 0.35rem 0;
+    font-weight: 700;
+    color: #0e1735;
+}
+
+.chatText {
+    margin: 0;
+    color: #24324b;
+    line-height: 1.6;
+}
+
+.fileBubble {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    border-radius: 14px;
+    background: #e8eefc;
+}
+
+.fileName {
+    margin: 0;
+    word-break: break-word;
+    color: #102048;
+    font-weight: 600;
+}
+
+.fileDownload {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #1542d7;
+    text-decoration: none;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.participantCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    border-radius: 18px;
+    background: #f6f8fc;
+    border: 1px solid rgba(19, 37, 75, 0.05);
+}
+
+.participantName {
+    margin: 0 0 0.35rem 0;
+    font-weight: 700;
+    color: #0e1735;
+}
+
+.participantActions {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.buttonContainers {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: rgba(5, 10, 32, 0.84);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.32);
+    z-index: 5;
+}
+
+.buttonContainers svg {
+    font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .lobbyContent {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .meetVideoContainer {
+        padding-right: 1rem;
+        padding-bottom: 8rem;
+    }
+
+    .conferenceView {
+        min-height: auto;
+    }
+
+    .participantsSidebar,
+    .chatRoom {
+        position: static;
+        width: 100%;
+    }
+
+    .participantsSidebar {
+        margin-bottom: 1rem;
+    }
+
+    .chatRoom {
+        height: 28rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lobbyPage {
+        padding: 1rem 0.75rem 2rem;
+    }
+
+    .lobbyCard {
+        padding: 0.85rem;
+        border-radius: 24px;
+    }
+
+    .lobbyPreviewWrap,
+    .lobbyPreview {
+        min-height: 280px;
+    }
+
+    .lobbyActions {
+        justify-content: stretch;
+    }
+
+    .lobbyActions :global(.MuiButton-root) {
+        width: 100%;
+    }
+
+    .meetVideoContainer {
+        padding: 0.75rem 0.75rem 8.5rem;
+    }
+
+    .meetingTopBar {
+        flex-direction: column;
+    }
+
+    .topBarMeta {
+        justify-content: flex-start;
+    }
+
+    .conferenceView {
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(220px, 320px);
+    }
+
+    .videoTile {
+        min-height: 220px;
+    }
+
+    .chattingArea {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .chattingArea :global(.MuiButton-root) {
+        grid-column: 1 / -1;
+    }
+
+    .buttonContainers {
+        width: calc(100% - 20px);
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 28px;
+    }
+}

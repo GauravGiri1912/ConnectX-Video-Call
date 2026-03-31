@@ -1,0 +1,424 @@
+.landingPageContainer {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: #f8fbff;
+  background:
+    linear-gradient(135deg, rgba(10, 17, 44, 0.92), rgba(28, 46, 95, 0.86)),
+    url("../public/background.png") center/cover no-repeat;
+}
+
+.landingPageContainer::before,
+.landingPageContainer::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+.landingPageContainer::before {
+  width: 24rem;
+  height: 24rem;
+  top: -6rem;
+  right: -3rem;
+  background: rgba(255, 122, 24, 0.18);
+}
+
+.landingPageContainer::after {
+  width: 20rem;
+  height: 20rem;
+  bottom: -5rem;
+  left: -4rem;
+  background: rgba(45, 91, 255, 0.18);
+}
+
+.landingShell {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.landingPageContainer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.brandBadge {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  box-shadow: 0 14px 35px rgba(255, 122, 24, 0.28);
+  font-weight: 800;
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.landingPageContainer nav .navlist p,
+.landingPageContainer nav .navlist a,
+.landingGhostButton {
+  cursor: pointer;
+  color: rgba(248, 251, 255, 0.88);
+}
+
+.landingGhostButton {
+  padding: 0.8rem 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.landingGhostButton:hover,
+.landingCtaButton:hover,
+.statCard:hover,
+.dashboardHeroCard:hover,
+.dashboardActionCard:hover {
+  transform: translateY(-2px);
+}
+
+.landingMainContainer {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  align-items: center;
+  gap: 3rem;
+  min-height: calc(100vh - 132px);
+  padding: 2.5rem 0 1rem;
+}
+
+.landingCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.landingEyebrow {
+  width: fit-content;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.92rem;
+  color: rgba(248, 251, 255, 0.78);
+}
+
+.landingCopy h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.landingCopy p {
+  max-width: 38rem;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(248, 251, 255, 0.78);
+}
+
+.landingActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.landingCtaButton,
+.landingSecondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  padding: 1rem 1.4rem;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.landingCtaButton {
+  color: white;
+  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
+  box-shadow: 0 16px 32px rgba(241, 90, 36, 0.28);
+}
+
+.landingSecondaryButton {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.landingStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.statCard {
+  padding: 1.2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease;
+}
+
+.statCard strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.statCard span {
+  color: rgba(248, 251, 255, 0.72);
+  font-size: 0.92rem;
+}
+
+.landingVisualWrap {
+  position: relative;
+}
+
+.landingVisualCard {
+  position: relative;
+  padding: 1.35rem;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 35px 60px rgba(8, 15, 40, 0.34);
+  backdrop-filter: blur(16px);
+}
+
+.floatingCard {
+  position: absolute;
+  z-index: 2;
+  width: 15rem;
+  padding: 1rem 1.1rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 22px 40px rgba(7, 12, 34, 0.24);
+  backdrop-filter: blur(18px);
+}
+
+.floatingCardTop {
+  top: 1.2rem;
+  left: -2rem;
+}
+
+.floatingCardBottom {
+  right: -1.2rem;
+  bottom: 2rem;
+}
+
+.floatingCard p {
+  color: rgba(248, 251, 255, 0.74);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.floatingCard strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.navBar {
+  width: min(1200px, calc(100% - 32px));
+  margin: 18px auto 0;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.navBarBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.navBarActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dashboardPage {
+  width: min(1200px, calc(100% - 32px));
+  margin: 24px auto 40px;
+}
+
+.dashboardHeroCard {
+  padding: 2rem;
+  border-radius: 32px;
+  color: white;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 28%),
+    linear-gradient(135deg, #11214c 0%, #2140a0 55%, #ff7a18 135%);
+  box-shadow: 0 28px 60px rgba(24, 42, 95, 0.28);
+}
+
+.dashboardHeroTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.dashboardHeroMeta {
+  max-width: 42rem;
+}
+
+.dashboardHeroMeta h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.04em;
+}
+
+.dashboardHeroMeta p {
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
+}
+
+.dashboardTag {
+  width: fit-content;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+}
+
+.dashboardStatGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dashboardMiniStat {
+  padding: 1rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dashboardMiniStat strong {
+  display: block;
+  font-size: 1.4rem;
+}
+
+.dashboardMiniStat span {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.dashboardSectionTitle {
+  margin: 1.6rem 0 0.85rem;
+  color: var(--text);
+}
+
+.dashboardActionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.dashboardActionCard {
+  min-height: 100%;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboardEmptyState {
+  padding: 3rem 1.4rem;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .landingMainContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+  }
+
+  .landingVisualWrap {
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+
+  .landingStats,
+  .dashboardStatGrid,
+  .dashboardActionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardHeroTop {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .landingShell,
+  .dashboardPage,
+  .navBar {
+    width: min(100%, calc(100% - 20px));
+  }
+
+  .landingPageContainer nav,
+  .navBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .landingPageContainer nav .navlist,
+  .navBarActions {
+    flex-wrap: wrap;
+  }
+
+  .landingCopy h1 {
+    line-height: 1.03;
+  }
+
+  .floatingCardTop,
+  .floatingCardBottom {
+    position: static;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
